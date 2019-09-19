@@ -18,11 +18,7 @@ function handleSubmit() {
 function handleItemCheckClicked(){
     $('.shopping-list').on('click', '.shopping-item-toggle', event => {
         const item = event.target.closest('li').getElementsByClassName('shopping-item').item(0);
-        if(item.classList.contains('shopping-item__checked')) {
-            item.classList.remove('shopping-item__checked');
-        } else {
-            item.classList.add('shopping-item__checked');
-        }
+        item.classList.toggle('shopping-item__checked');
     });
 }
 function handleItemDeleteClicked(){
